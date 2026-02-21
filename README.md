@@ -74,9 +74,7 @@ simulation_data.csv
 
 ### 📊 Hospital Simulation Result
 
-<p align="center">
-  <img src="pink_plot.png" width="750">
-</p>
+<img src="pink_plot.png" width="750">
 
 ---
 
@@ -100,9 +98,7 @@ simulation_data.csv
 
 # 🏆 Results & Model Comparison
 
-<p align="center">
-  <img src="model_comparison.png" width="800">
-</p>
+<img src="model_comparison.png" width="800">
 
 ### 🔍 Key Observations
 
