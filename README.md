@@ -104,9 +104,9 @@ Higher arrival rates generally lead to increased waiting times when system capac
 
 ### 📊 Hospital Simulation Result
 
-![Hospital Simulation Result](Modelling_and_Simulation/pink_plot.png)
-
-*(Make sure your pink scatter plot image is saved in the repository as `pink_plot.png`.)*
+<p align="center">
+  <img src="Modelling_and_Simulation/pink_plot.png" width="750"/>
+</p>
 
 ---
 
@@ -136,14 +136,17 @@ These metrics allow accurate performance comparison across models.
 
 # 🏆 Results & Model Comparison
 
-A comparison table was generated for all models.
+The performance comparison of all trained regression models is shown below:
 
-📌 Observation:
+<p align="center">
+  <img src="Modelling_and_Simulation/model_comparison.png" width="800"/>
+</p>
 
-- Tree-based ensemble models like **Random Forest** and **Gradient Boosting** achieved the best performance.
-- They captured nonlinear relationships better than linear models.
+📌 **Key Observation:**
 
-(Add your comparison table screenshot here if required.)
+- **K-Nearest Neighbors (KNN)** achieved the lowest MSE and highest R² score.
+- Ensemble methods like **Random Forest** and **Gradient Boosting** also performed strongly.
+- Linear models showed comparatively weaker performance due to nonlinear system behavior.
 
 ---
 
@@ -176,10 +179,12 @@ The integration of SimPy with ML provides a scalable framework for predictive mo
 
 # 📂 Repository Structure
 
-simpy_hospital_simulation.ipynb  
-simulation_data.csv  
-README.md  
-pink_plot.png  
+Modelling_and_Simulation/
+ ├── simpy_hospital_simulation.ipynb  
+ ├── simulation_data.csv  
+ ├── pink_plot.png  
+ ├── model_comparison.png  
+ └── README.md  
 
 ---
 
