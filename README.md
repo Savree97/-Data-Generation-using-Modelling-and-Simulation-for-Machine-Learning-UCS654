@@ -4,9 +4,9 @@
 
 ## 📌 Project Overview
 
-This project demonstrates how modelling and simulation can be used to generate synthetic datasets for Machine Learning tasks.
+This project demonstrates how modelling and simulation can generate synthetic datasets for Machine Learning tasks.
 
-A Hospital Queue System is simulated using SimPy, and the generated data is used to train and compare multiple regression models.
+A Hospital Queue System was simulated using SimPy, and the generated dataset was used to train multiple regression models.
 
 ---
 
@@ -14,7 +14,7 @@ A Hospital Queue System is simulated using SimPy, and the generated data is used
 
 ## 🧠 SimPy – Discrete Event Simulation Library
 
-SimPy is a Python-based discrete-event simulation framework used to model real-world queue systems and resource-constrained environments.
+SimPy is a Python-based discrete-event simulation framework used to model queue systems and resource-constrained environments.
 
 ---
 
@@ -53,28 +53,11 @@ Each simulation produces one dataset sample.
 
 ---
 
-# 📂 Dataset
-
-Features:
-
-- arrival_rate  
-- service_rate  
-- doctors  
-- avg_wait_time (target)  
-
-Saved as:
-
-```
-simulation_data.csv
-```
-
----
-
 # 📈 Data Visualization
 
 ### 📊 Hospital Simulation Result
 
-<img src="pink_plot.png" width="750">
+<img src="Modelling_and_Simulation/pink_plot.png" width="750">
 
 ---
 
@@ -98,40 +81,21 @@ simulation_data.csv
 
 # 🏆 Results & Model Comparison
 
-<img src="model_comparison.png" width="800">
-
-### 🔍 Key Observations
-
-- KNN achieved the lowest MSE and highest R² score  
-- Random Forest and Gradient Boosting performed strongly  
-- Linear Regression performed comparatively weaker  
+<img src="Modelling_and_Simulation/model_comparison.png" width="800">
 
 ---
 
 # 📂 Repository Structure
 
 ```
+README.md
 Modelling_and_Simulation/
 │
 ├── simpy_hospital_simulation.ipynb
 ├── simulation_data.csv
 ├── pink_plot.png
-├── model_comparison.png
-└── README.md
+└── model_comparison.png
 ```
-
----
-
-# ▶ How to Run
-
-1. Open notebook in Google Colab  
-2. Install SimPy:
-
-```
-pip install simpy
-```
-
-3. Run all cells  
 
 ---
 
