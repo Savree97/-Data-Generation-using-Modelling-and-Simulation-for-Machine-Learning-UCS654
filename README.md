@@ -108,7 +108,7 @@ Higher arrival rates generally lead to increased waiting times when system capac
 ### 📊 Hospital Simulation Result
 
 <p align="center">
-  <img src="Modelling_and_Simulation/pink_plot.png" width="750"/>
+  <img src="pink_plot.png" width="750"/>
 </p>
 
 ---
@@ -142,7 +142,7 @@ These metrics allow accurate performance comparison across models.
 The performance comparison of all trained regression models is shown below:
 
 <p align="center">
-  <img src="Modelling_and_Simulation/model_comparison.png" width="800"/>
+  <img src="model_comparison.png" width="800"/>
 </p>
 
 📌 **Key Observations:**
