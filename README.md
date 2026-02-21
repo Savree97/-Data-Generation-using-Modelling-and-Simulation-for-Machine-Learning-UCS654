@@ -1,15 +1,18 @@
 # 🏥 Data Generation using Modelling & Simulation for Machine Learning  
 ### UCS654 – Assignment 6  
+### 👩‍💻 Savree Dohar  
+### 🎓 Roll No: 102317097  
+
 ---
 
 ## 📌 Project Overview
 
-In many real-world systems, collecting large-scale real data is expensive, slow, or sometimes impossible.  
-Modelling and simulation provide a powerful alternative by generating **synthetic but realistic datasets**.
+In many real-world systems, collecting large-scale real data is expensive, slow, or sometimes impractical.  
+Modelling and simulation provide a powerful alternative by generating **synthetic yet realistic datasets**.
 
-In this project, a **Hospital Queue System** is simulated using **SimPy**, and the generated data is used to train and compare multiple Machine Learning models.
+In this project, a **Hospital Queue System** is simulated using **SimPy**, and the generated synthetic dataset is used to train and compare multiple Machine Learning regression models.
 
-This assignment demonstrates how simulation-based modelling can effectively support predictive analytics.
+This assignment demonstrates how simulation-based modelling can effectively support predictive analytics workflows.
 
 ---
 
@@ -22,33 +25,34 @@ This assignment demonstrates how simulation-based modelling can effectively supp
 - Queueing systems  
 - Resource allocation  
 - Process scheduling  
-- Service systems  
+- Service environments  
 
-It is lightweight, efficient, and integrates seamlessly with ML workflows.
+It is lightweight, efficient, and integrates seamlessly with Machine Learning pipelines.
 
 ---
 
 # 🏥 Problem Description
 
-We simulate a **Hospital Patient Queue System** where:
+A **Hospital Patient Queue System** is simulated where:
 
 - Patients arrive randomly  
-- Doctors are limited resources  
+- Doctors are limited shared resources  
 - Each patient experiences waiting time before treatment  
 
 🎯 **Goal:**  
-To analyze how system parameters affect **Average Waiting Time**, and then train ML models to predict waiting time based on those parameters.
+To analyze how system parameters influence **Average Waiting Time**, and to train ML models that predict waiting time based on those parameters.
 
 ---
 
 # ⚙️ Simulation Model & Parameters
 
 ## 🔄 Model Type
+
 Discrete-event simulation using SimPy:
 
 - Patient arrivals → Exponential distribution  
-- Service time → Exponential distribution  
-- Doctors → Limited shared resources  
+- Service times → Exponential distribution  
+- Doctors → Limited resource pool  
 
 ---
 
@@ -61,21 +65,21 @@ Discrete-event simulation using SimPy:
 | doctors          | Number of available doctors         | 1           | 5           |
 | simulation_time  | Total simulation duration           | 100         | Fixed       |
 
-These bounds ensure realistic system behavior while maintaining stability.
+These bounds ensure realistic and stable system behavior.
 
 ---
 
 # 🔁 Data Generation Methodology
 
-The following steps were executed:
+The following steps were performed:
 
 1️⃣ Random parameter values were generated within defined bounds  
-2️⃣ Parameters were passed to the SimPy simulation  
-3️⃣ The simulation ran for fixed duration  
-4️⃣ Average waiting time was recorded  
-5️⃣ Process repeated **1000 times**
+2️⃣ Parameters were passed into the SimPy simulation  
+3️⃣ The simulation was executed for a fixed duration  
+4️⃣ The average patient waiting time was recorded  
+5️⃣ The process was repeated **1000 times**  
 
-Each simulation run produces one dataset sample.
+Each simulation run produced one data sample.
 
 ---
 
@@ -90,29 +94,31 @@ The generated dataset contains:
 | doctors          | Number of doctors |
 | avg_wait_time    | Average patient waiting time (Target Variable) |
 
-The dataset is stored as:
+The dataset is saved as:
 
+```
 simulation_data.csv
+```
 
 ---
 
 # 📈 Data Visualization
 
-The following scatter plot visualizes the relationship between **arrival rate** and **average waiting time**.
+The scatter plot below visualizes the relationship between **arrival rate** and **average waiting time**.
 
 Higher arrival rates generally lead to increased waiting times when system capacity becomes saturated.
 
 ### 📊 Hospital Simulation Result
 
 <p align="center">
-  <img src="Modelling_and_Simulation/pink_plot.png" width="750"/>
+  <img src="pink_plot.png" width="750"/>
 </p>
 
 ---
 
 # 🤖 Machine Learning Models Used
 
-The following regression models were trained:
+The following regression models were trained and evaluated:
 
 1️⃣ Linear Regression  
 2️⃣ Decision Tree Regressor  
@@ -127,10 +133,10 @@ The following regression models were trained:
 
 Models were evaluated using:
 
-- 📉 **Mean Squared Error (MSE)**
+- 📉 **Mean Squared Error (MSE)**  
 - 📊 **R² Score**
 
-These metrics allow accurate performance comparison across models.
+These metrics allow accurate comparison of prediction performance across models.
 
 ---
 
@@ -139,13 +145,13 @@ These metrics allow accurate performance comparison across models.
 The performance comparison of all trained regression models is shown below:
 
 <p align="center">
-  <img src="Modelling_and_Simulation/model_comparison.png" width="800"/>
+  <img src="model_comparison.png" width="800"/>
 </p>
 
-📌 **Key Observation:**
+📌 **Key Observations:**
 
 - **K-Nearest Neighbors (KNN)** achieved the lowest MSE and highest R² score.
-- Ensemble methods like **Random Forest** and **Gradient Boosting** also performed strongly.
+- Ensemble models such as **Random Forest** and **Gradient Boosting** performed strongly.
 - Linear models showed comparatively weaker performance due to nonlinear system behavior.
 
 ---
@@ -153,50 +159,55 @@ The performance comparison of all trained regression models is shown below:
 # 🧠 Key Insights
 
 ✔ Simulation successfully generated meaningful synthetic data  
-✔ System behavior matches queue theory expectations  
-✔ ML models effectively learned system patterns  
-✔ Ensemble methods outperform simpler regression techniques  
+✔ Queue system behavior aligns with theoretical expectations  
+✔ Machine Learning models effectively captured system patterns  
+✔ Ensemble and instance-based models outperformed simple linear approaches  
 
 ---
 
 # 🎯 Conclusion
 
-This project demonstrates the powerful synergy between:
+This project demonstrates the powerful integration of:
 
 - 🧮 Mathematical Modelling  
-- 🔄 Simulation  
+- 🔄 Discrete-Event Simulation  
 - 🤖 Machine Learning  
 
-Simulation-based data generation is highly valuable when:
+Simulation-based data generation is especially valuable when:
 
-- Real-world data is scarce  
+- Real-world data is limited  
 - Data collection is expensive  
 - Controlled experimentation is required  
 
-The integration of SimPy with ML provides a scalable framework for predictive modeling.
+The integration of SimPy with ML provides a scalable and practical framework for predictive modeling tasks.
 
 ---
 
 # 📂 Repository Structure
 
+```
 Modelling_and_Simulation/
- ├── simpy_hospital_simulation.ipynb  
- ├── simulation_data.csv  
- ├── pink_plot.png  
- ├── model_comparison.png  
- └── README.md  
+│
+├── simpy_hospital_simulation.ipynb
+├── simulation_data.csv
+├── pink_plot.png
+├── model_comparison.png
+└── README.md
+```
 
 ---
 
 # ▶ How to Run
 
 1. Open the notebook in Google Colab  
-2. Install SimPy using:
+2. Install SimPy:
 
-pip install simpy  
+```
+pip install simpy
+```
 
 3. Run all cells sequentially  
-4. Observe simulation results, plots, and ML comparison  
+4. Observe simulation results, plots, and model comparison  
 
 ---
 
