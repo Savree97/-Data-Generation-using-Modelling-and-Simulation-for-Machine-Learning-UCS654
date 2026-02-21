@@ -1,8 +1,5 @@
 # 🏥 Data Generation using Modelling & Simulation for Machine Learning  
 ### UCS654 – Assignment 6  
-### 👩‍💻 Savree Dohar  
-### 🎓 Roll No: 102317097  
-
 ---
 
 ## 📌 Project Overview
@@ -10,9 +7,9 @@
 In many real-world systems, collecting large-scale real data is expensive, slow, or sometimes impractical.  
 Modelling and simulation provide a powerful alternative by generating **synthetic yet realistic datasets**.
 
-In this project, a **Hospital Queue System** is simulated using **SimPy**, and the generated synthetic dataset is used to train and compare multiple Machine Learning regression models.
+In this project, a **Hospital Queue System** is simulated using **SimPy**, and the generated dataset is used to train and compare multiple Machine Learning regression models.
 
-This assignment demonstrates how simulation-based modelling can effectively support predictive analytics workflows.
+This assignment demonstrates how simulation-based modelling can effectively support predictive analytics.
 
 ---
 
@@ -20,14 +17,14 @@ This assignment demonstrates how simulation-based modelling can effectively supp
 
 ## 🧠 SimPy – Discrete Event Simulation Library
 
-**SimPy** is an open-source Python library used for modelling real-world systems such as:
+**SimPy** is an open-source Python library used for modelling:
 
 - Queueing systems  
 - Resource allocation  
-- Process scheduling  
 - Service environments  
+- Process scheduling  
 
-It is lightweight, efficient, and integrates seamlessly with Machine Learning pipelines.
+It integrates seamlessly with Python-based ML workflows.
 
 ---
 
@@ -76,10 +73,10 @@ The following steps were performed:
 1️⃣ Random parameter values were generated within defined bounds  
 2️⃣ Parameters were passed into the SimPy simulation  
 3️⃣ The simulation was executed for a fixed duration  
-4️⃣ The average patient waiting time was recorded  
+4️⃣ The average waiting time was recorded  
 5️⃣ The process was repeated **1000 times**  
 
-Each simulation run produced one data sample.
+Each simulation run produced one dataset sample.
 
 ---
 
@@ -111,7 +108,7 @@ Higher arrival rates generally lead to increased waiting times when system capac
 ### 📊 Hospital Simulation Result
 
 <p align="center">
-  <img src="pink_plot.png" width="750"/>
+  <img src="Modelling_and_Simulation/pink_plot.png" width="750"/>
 </p>
 
 ---
@@ -136,7 +133,7 @@ Models were evaluated using:
 - 📉 **Mean Squared Error (MSE)**  
 - 📊 **R² Score**
 
-These metrics allow accurate comparison of prediction performance across models.
+These metrics allow accurate performance comparison across models.
 
 ---
 
@@ -145,7 +142,7 @@ These metrics allow accurate comparison of prediction performance across models.
 The performance comparison of all trained regression models is shown below:
 
 <p align="center">
-  <img src="model_comparison.png" width="800"/>
+  <img src="Modelling_and_Simulation/model_comparison.png" width="800"/>
 </p>
 
 📌 **Key Observations:**
@@ -167,19 +164,19 @@ The performance comparison of all trained regression models is shown below:
 
 # 🎯 Conclusion
 
-This project demonstrates the powerful integration of:
+This project demonstrates the integration of:
 
 - 🧮 Mathematical Modelling  
 - 🔄 Discrete-Event Simulation  
 - 🤖 Machine Learning  
 
-Simulation-based data generation is especially valuable when:
+Simulation-based data generation is valuable when:
 
 - Real-world data is limited  
 - Data collection is expensive  
 - Controlled experimentation is required  
 
-The integration of SimPy with ML provides a scalable and practical framework for predictive modeling tasks.
+The integration of SimPy with ML provides a scalable framework for predictive modeling.
 
 ---
 
@@ -207,7 +204,7 @@ pip install simpy
 ```
 
 3. Run all cells sequentially  
-4. Observe simulation results, plots, and model comparison  
+4. Observe simulation results, plots, and ML comparison  
 
 ---
 
