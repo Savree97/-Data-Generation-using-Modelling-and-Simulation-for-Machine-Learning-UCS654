@@ -104,7 +104,7 @@ Higher arrival rates generally lead to increased waiting times when system capac
 
 ### 📊 Hospital Simulation Result
 
-![Hospital Simulation Result](pink_plot.png)
+![Hospital Simulation Result]("C:\Users\savre\OneDrive\Desktop\Modelling_and_Simulation\pink_plot.png")
 
 *(Make sure your pink scatter plot image is saved in the repository as `pink_plot.png`.)*
 
